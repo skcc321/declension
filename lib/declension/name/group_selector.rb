@@ -1,7 +1,7 @@
 module Declension::Name::GroupSelector
-  FIRST_GROUP_REGEXP = /[ая]\Z/i
-  SECOND_GROUP_REGEXP = /[бвгджзйклмнопрстфхцчшщь]\Z/i
-  THIRD_GROUP_REGEXP = /[бвгджзйклмнпрстфхцчшщь]\Z/i
+  FIRST_GROUP_REGEXP = /[ая]\Z/
+  SECOND_GROUP_REGEXP = /[бвгджзйклмнопрстфхцчшщь]\Z/
+  THIRD_GROUP_REGEXP = /[бвгджзйклмнпрстфхцчшщь]\Z/
 
   MALE = :male
   FEMALE = :female
