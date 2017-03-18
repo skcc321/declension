@@ -6,9 +6,6 @@
 Purpose for this gem is ability to change case of Ukrainian names
 [[Example]](http://r2u.org.ua/pravopys/pravXXI/114.html)
 
-for example:
-
-
 ## Installation
 
 Add this line to your application's Gemfile:
