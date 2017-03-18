@@ -1,83 +1,70 @@
+# coding: utf-8
+
 class Declension::Name::FirstGroup < Declension::BaseGroup
   def genitive
-    case name
-    when /а\Z/
-      name.gsub(/а\Z/, 'и')
-    when /ія\Z/
-      name.gsub(/ія\Z/, 'ії')
-    when /я\Z/
-      name.gsub(/я\Z/, 'і')
+    case word
+    when /а\Z/i
+      word.gsub(/а\Z/i, 'и')
+    when /ія\Z/i
+      word.gsub(/ія\Z/i, 'ії')
+    when /я\Z/i
+      word.gsub(/я\Z/i, 'і')
     end
   end
 
   def dative
-    case name
-    when /га\Z/
-      name.gsub(/га\Z/, 'зі')
-    when /ка\Z/
-      name.gsub(/ка\Z/, 'ці')
-    when /ха\Z/
-      name.gsub(/ха\Z/, 'сі')
-    when /а\Z/
-      name.gsub(/а\Z/, 'і')
-    when /ія\Z/
-      name.gsub(/ія\Z/, 'ії')
-    when /я\Z/
-      name.gsub(/я\Z/, 'і')
+    case word
+    when /га\Z/i
+      word.gsub(/га\Z/i, 'зі')
+    when /ка\Z/i
+      word.gsub(/ка\Z/i, 'ці')
+    when /ха\Z/i
+      word.gsub(/ха\Z/i, 'сі')
+    when /ія\Z/i
+      word.gsub(/ія\Z/i, 'ії')
+    when /[ая]\Z/i
+      word.gsub(/[ая]\Z/i, 'і')
     end
   end
 
   def accusative
-    case name
+    case word
     when /а\Z/
-      name.gsub(/а\Z/, 'у')
+      word.gsub(/а\Z/, 'у')
     when /ія\Z/
-      name.gsub(/ія\Z/, 'ію')
+      word.gsub(/ія\Z/, 'ію')
     when /я\Z/
-      name.gsub(/я\Z/, 'ю')
+      word.gsub(/я\Z/, 'ю')
     end
   end
 
   def ablative
-    case name
+    case word
     when /а\Z/
-      name.gsub(/а\Z/, 'ою')
+      word.gsub(/а\Z/, 'ою')
     when /ія\Z/
-      name.gsub(/ія\Z/, 'ією')
+      word.gsub(/ія\Z/, 'ією')
     when /я\Z/
-      name.gsub(/я\Z/, 'ею')
+      word.gsub(/я\Z/, 'ею')
     end
   end
 
   def local
-    case name
-    when /га\Z/
-      name.gsub(/га\Z/, 'зі')
-    when /ка\Z/
-      name.gsub(/ка\Z/, 'ці')
-    when /ха\Z/
-      name.gsub(/ха\Z/, 'сі')
-    when /а\Z/
-      name.gsub(/а\Z/, 'і')
-    when /ія\Z/
-      name.gsub(/ія\Z/, 'ії')
-    when /я\Z/
-      name.gsub(/я\Z/, 'і')
-    end
+    dative
   end
 
   def vocative
-    case name
+    case word
     when /а\Z/
-      name.gsub(/а\Z/, 'о')
+      word.gsub(/а\Z/, 'о')
     when /ія\Z/
-      name.gsub(/ія\Z/, 'іє')
+      word.gsub(/ія\Z/, 'іє')
     when /лля\Z/
-      name.gsub(/лля\Z/, 'ллє')
+      word.gsub(/лля\Z/, 'ллє')
     when /ля\Z/
-      name.gsub(/ля\Z/, 'лю')
+      word.gsub(/ля\Z/, 'лю')
     when /я\Z/
-      name.gsub(/я\Z/, 'е')
+      word.gsub(/я\Z/, 'е')
     end
   end
 end

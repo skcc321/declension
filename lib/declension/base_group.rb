@@ -1,12 +1,16 @@
-class Declension::BaseGroup
-  attr_reader :name
+# coding: utf-8
 
-  def initialize(name, opts = {})
-    @name = name
+# base group declaration
+class Declension::BaseGroup
+  attr_reader :word, :opts
+
+  def initialize(word, opts = {})
+    @word = word
+    @opts = opts
   end
 
   def denominative
-    name
+    word
   end
 
   def genitive

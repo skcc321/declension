@@ -1,25 +1,27 @@
+# coding: utf-8
+
 class Declension::Name::ThirdGroup < Declension::BaseGroup
   def genitive
-    "#{name}и"
+    "#{word}и"
   end
 
   def dative
-    "#{name}і"
+    "#{word}і"
   end
 
   def accusative
-    name
+    word
   end
 
   def ablative
-    "#{name}’ю"
+    "#{word}’ю"
   end
 
   def local
-    "#{name}і"
+    dative
   end
 
   def vocative
-    "#{name}е"
+    "#{word}е"
   end
 end

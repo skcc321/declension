@@ -1,3 +1,5 @@
+# coding: utf-8
+
 module Declension::Name::GroupSelector
   FIRST_GROUP_REGEXP = /[ая]\Z/
   SECOND_GROUP_REGEXP = /[бвгджзйклмнопрстфхцчшщь]\Z/
